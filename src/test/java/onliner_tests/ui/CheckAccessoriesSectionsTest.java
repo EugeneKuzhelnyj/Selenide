@@ -1,4 +1,7 @@
+package onliner_tests.ui;
+
 import io.qameta.allure.Step;
+import onliner_tests.BaseTest;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import pages.AccessoriesPage;
@@ -17,6 +20,7 @@ public class CheckAccessoriesSectionsTest extends BaseTest {
         mainPage = new MainPage();
         accessoriesPage = new AccessoriesPage();
     }
+
     @Step("Are All Items Contains Name And Min Price And Count Of Goods?")
     @Test
     public void areAllItemsContainANameAndMinPriceAndCountOfGoodsTest() {

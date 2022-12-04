@@ -1,14 +1,10 @@
 package pages;
 
 import com.codeborne.selenide.ElementsCollection;
-
-import java.time.Duration;
-
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.matchText;
 import static com.codeborne.selenide.Selenide.$$x;
 import static java.time.Duration.ofSeconds;
-
 
 public class AccessoriesPage extends  BasePage {
     private final ElementsCollection accessoriesName = $$x("//div[@class= 'catalog-navigation-list__aside-item " +

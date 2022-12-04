@@ -1,4 +1,7 @@
+package onliner_tests.ui;
+
 import io.qameta.allure.Step;
+import onliner_tests.BaseTest;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
@@ -29,4 +32,5 @@ public class CatalogSectionsTest extends BaseTest {
         mainPage.clickOnCatalog();
         onlinerCatalogPage.isAllCatalogSectionsExistAndDisplayed(sections);
     }
+
 }

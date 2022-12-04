@@ -3,6 +3,7 @@ package selenide;
 import org.openqa.selenium.MutableCapabilities;
 
 public class CapabilityFactory {
+
     public static MutableCapabilities getCapabilities(String browserType) {
         return switch (browserType){
             case "firefox" -> BrowserManager.getFirefoxOptions();

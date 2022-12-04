@@ -1,6 +1,5 @@
 package listeners;
 
-
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.TestWatcher;
 
@@ -15,4 +14,5 @@ public class AllureListener implements TestWatcher {
     public void testAborted(ExtensionContext context, Throwable cause) {
         takeScreenshotAndAttachToAllureReport();
     }
+
 }

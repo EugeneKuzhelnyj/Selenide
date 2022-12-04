@@ -1,14 +1,15 @@
 package pages;
 
-import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static java.lang.String.format;
 
 public class SushiveslaPage extends BasePage {
 
     private static final String SUSHIVESLA_URL = "https://catalog.onliner.by/sushivesla";
-    private final SelenideElement rolls = $x("//span[@class = 'schema-filter__checkbox-text' and text() = 'роллы']");
-
+    private static final String SUSHI_TYPE_PATTERN = "//span[@class = 'schema-filter__checkbox-text' and text() = '%s']";
 
     public SushiveslaPage openSushivesla(){
         open(SUSHIVESLA_URL);
@@ -16,9 +17,8 @@ public class SushiveslaPage extends BasePage {
     }
 
     public SushiveslaPage selectRolls(){
-        executeJavaScript("arguments[0].click()",rolls);
+        executeJavaScript("arguments[0].click()",getWebDriver().findElement(By.xpath(format(SUSHI_TYPE_PATTERN,"роллы"))));
         return this;
     }
-
 
 }

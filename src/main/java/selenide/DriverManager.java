@@ -4,9 +4,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
 import java.net.MalformedURLException;
 import java.net.URL;
-
 
 public class DriverManager {
     public static final String REMOTE_URL = "http://192.168.100.8:4444/wd/hub";
